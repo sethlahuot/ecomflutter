@@ -6,6 +6,7 @@ class ProductModel {
   final double price;
   final double? priceAfetDiscount;
   final int? dicountpercent;
+  final String category;
 
   ProductModel({
     required this.image,
@@ -14,6 +15,7 @@ class ProductModel {
     required this.price,
     this.priceAfetDiscount,
     this.dicountpercent,
+    required this.category,
   });
 }
 
@@ -25,12 +27,14 @@ List<ProductModel> demoPopularProducts = [
     price: 540,
     priceAfetDiscount: 420,
     dicountpercent: 20,
+    category: "Woman's",
   ),
   ProductModel(
     image: productDemoImg4,
     title: "Mountain Beta Warehouse",
     brandName: "Lipsy london",
     price: 800,
+    category: "Man's",
   ),
   ProductModel(
     image: productDemoImg5,
@@ -39,6 +43,7 @@ List<ProductModel> demoPopularProducts = [
     price: 650.62,
     priceAfetDiscount: 390.36,
     dicountpercent: 40,
+    category: "On Sale",
   ),
   ProductModel(
     image: productDemoImg6,
@@ -47,6 +52,7 @@ List<ProductModel> demoPopularProducts = [
     price: 1264,
     priceAfetDiscount: 1200.8,
     dicountpercent: 5,
+    category: "Woman's",
   ),
   ProductModel(
     image: "https://i.imgur.com/tXyOMMG.png",
@@ -55,6 +61,7 @@ List<ProductModel> demoPopularProducts = [
     price: 650.62,
     priceAfetDiscount: 390.36,
     dicountpercent: 40,
+    category: "Woman's",
   ),
   ProductModel(
     image: "https://i.imgur.com/h2LqppX.png",
@@ -63,6 +70,7 @@ List<ProductModel> demoPopularProducts = [
     price: 1264,
     priceAfetDiscount: 1200.8,
     dicountpercent: 5,
+    category: "Woman's",
   ),
 ];
 List<ProductModel> demoFlashSaleProducts = [
@@ -73,6 +81,7 @@ List<ProductModel> demoFlashSaleProducts = [
     price: 650.62,
     priceAfetDiscount: 390.36,
     dicountpercent: 40,
+    category: "On Sale",
   ),
   ProductModel(
     image: productDemoImg6,
@@ -81,6 +90,7 @@ List<ProductModel> demoFlashSaleProducts = [
     price: 1264,
     priceAfetDiscount: 1200.8,
     dicountpercent: 5,
+    category: "Woman's",
   ),
   ProductModel(
     image: productDemoImg4,
@@ -89,6 +99,7 @@ List<ProductModel> demoFlashSaleProducts = [
     price: 800,
     priceAfetDiscount: 680,
     dicountpercent: 15,
+    category: "Man's",
   ),
 ];
 List<ProductModel> demoBestSellersProducts = [
@@ -99,6 +110,7 @@ List<ProductModel> demoBestSellersProducts = [
     price: 650.62,
     priceAfetDiscount: 390.36,
     dicountpercent: 40,
+    category: "Woman's",
   ),
   ProductModel(
     image: "https://i.imgur.com/h2LqppX.png",
@@ -107,6 +119,7 @@ List<ProductModel> demoBestSellersProducts = [
     price: 1264,
     priceAfetDiscount: 1200.8,
     dicountpercent: 5,
+    category: "Woman's",
   ),
   ProductModel(
     image: productDemoImg4,
@@ -115,6 +128,7 @@ List<ProductModel> demoBestSellersProducts = [
     price: 800,
     priceAfetDiscount: 680,
     dicountpercent: 15,
+    category: "Man's",
   ),
 ];
 List<ProductModel> kidsProducts = [
@@ -125,18 +139,21 @@ List<ProductModel> kidsProducts = [
     price: 650.62,
     priceAfetDiscount: 590.36,
     dicountpercent: 24,
+    category: "Kids",
   ),
   ProductModel(
     image: "https://i.imgur.com/7fSxC7k.png",
     title: "Printed Sleeveless Tiered Swing Dress",
     brandName: "Lipsy london",
     price: 650.62,
+    category: "Kids",
   ),
   ProductModel(
     image: "https://i.imgur.com/pXnYE9Q.png",
     title: "Ruffle-Sleeve Ponte-Knit Sheath ",
     brandName: "Lipsy london",
     price: 400,
+    category: "Kids",
   ),
   ProductModel(
     image: "https://i.imgur.com/V1MXgfa.png",
@@ -145,17 +162,20 @@ List<ProductModel> kidsProducts = [
     price: 400,
     priceAfetDiscount: 360,
     dicountpercent: 20,
+    category: "Kids",
   ),
   ProductModel(
     image: "https://i.imgur.com/8gvE5Ss.png",
     title: "Printed Sleeveless Tiered Swing Dress",
     brandName: "Lipsy london",
     price: 654,
+    category: "Kids",
   ),
   ProductModel(
     image: "https://i.imgur.com/cBvB5YB.png",
     title: "Mountain Beta Warehouse",
     brandName: "Lipsy london",
     price: 250,
+    category: "Kids",
   ),
 ];

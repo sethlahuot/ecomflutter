@@ -24,6 +24,12 @@ const String discoverWithImageScreenRoute = "discover_with_image";
 const String subDiscoverScreenRoute = "sub_discover";
 const String discoverScreenRoute = "discover";
 const String onSaleScreenRoute = "on_sale";
+
+// ignore: constant_identifier_names
+const String MensScreenRoute = "Mens";
+// ignore: constant_identifier_names
+const String WomensScreenRoute = "Womens";
+
 const String kidsScreenRoute = "kids";
 const String searchScreenRoute = "search";
 const String searchHistoryScreenRoute = "search_history";

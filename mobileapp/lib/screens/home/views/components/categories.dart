@@ -7,7 +7,8 @@ import '../../../../constants.dart';
 // For preview
 class CategoryModel {
   final String name;
-  final String? svgSrc, route;
+  final String? svgSrc;
+  final String? route;
 
   CategoryModel({
     required this.name,
@@ -22,8 +23,12 @@ List<CategoryModel> demoCategories = [
       name: "On Sale",
       svgSrc: "assets/icons/Sale.svg",
       route: onSaleScreenRoute),
-  CategoryModel(name: "Man's", svgSrc: "assets/icons/Man.svg"),
-  CategoryModel(name: "Woman’s", svgSrc: "assets/icons/Woman.svg"),
+  CategoryModel(
+      name: "Man's", svgSrc: "assets/icons/Man.svg", route: MensScreenRoute),
+  CategoryModel(
+      name: "Woman's",
+      svgSrc: "assets/icons/Woman.svg",
+      route: WomensScreenRoute),
   CategoryModel(
       name: "Kids", svgSrc: "assets/icons/Child.svg", route: kidsScreenRoute),
 ];

@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../constants.dart';
 import '../../../../models/product_model.dart';
-import '../../../../models/category_model.dart';
+import '../../../../models/category_model.dart' as category_model;
 import '../../../../route/screen_export.dart';
 import 'package:shop/components/product/product_card.dart';
 
-class OnSaleScreen extends StatefulWidget {
-  const OnSaleScreen({super.key});
+class MensScreenRoute extends StatefulWidget {
+  const MensScreenRoute({super.key});
 
   @override
-  State<OnSaleScreen> createState() => _OnSaleScreenState();
+  State<MensScreenRoute> createState() => _MensScreenRouteState();
 }
 
-class _OnSaleScreenState extends State<OnSaleScreen> {
+class _MensScreenRouteState extends State<MensScreenRoute> {
   String selectedCategory = "All Clothing";
   List<ProductModel> filteredProducts = [];
 
@@ -21,7 +21,7 @@ class _OnSaleScreenState extends State<OnSaleScreen> {
   void initState() {
     super.initState();
     filteredProducts = demoFlashSaleProducts
-        .where((product) => product.category == "On Sale")
+        .where((product) => product.category == "Man's")
         .toList();
   }
 
@@ -30,12 +30,12 @@ class _OnSaleScreenState extends State<OnSaleScreen> {
       selectedCategory = category;
       if (category == "All Clothing") {
         filteredProducts = demoFlashSaleProducts
-            .where((product) => product.category == "On Sale")
+            .where((product) => product.category == "Man's")
             .toList();
       } else {
         filteredProducts = demoFlashSaleProducts
             .where((product) =>
-                product.category == "On Sale" &&
+                product.category == "Man's" &&
                 product.title.toLowerCase().contains(category.toLowerCase()))
             .toList();
       }
@@ -48,7 +48,7 @@ class _OnSaleScreenState extends State<OnSaleScreen> {
         Navigator.pushNamed(context, onSaleScreenRoute);
         break;
       case "Man's & Woman's":
-        Navigator.pushNamed(context, MensScreenRoute);
+        Navigator.pushNamed(context, WomensScreenRoute);
         break;
       case "Kids":
         Navigator.pushNamed(context, kidsScreenRoute);
@@ -63,7 +63,7 @@ class _OnSaleScreenState extends State<OnSaleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('On Sale'),
+        title: const Text('Men\'s'),
         centerTitle: true,
       ),
       body: Column(
@@ -76,20 +76,22 @@ class _OnSaleScreenState extends State<OnSaleScreen> {
             child: Row(
               children: [
                 ...List.generate(
-                  demoCategories.length,
+                  category_model.demoCategories.length,
                   (index) => Padding(
                     padding: EdgeInsets.only(
                       left: index == 0 ? 0 : defaultPadding / 2,
-                      right: index == demoCategories.length - 1
+                      right: index == category_model.demoCategories.length - 1
                           ? 0
                           : defaultPadding / 2,
                     ),
                     child: CategoryBtn(
-                      category: demoCategories[index].title,
-                      svgSrc: demoCategories[index].svgSrc,
-                      isActive: selectedCategory == demoCategories[index].title,
+                      category: category_model.demoCategories[index].title,
+                      svgSrc: category_model.demoCategories[index].svgSrc,
+                      isActive: selectedCategory ==
+                          category_model.demoCategories[index].title,
                       press: () {
-                        handleCategoryPress(demoCategories[index].title);
+                        handleCategoryPress(
+                            category_model.demoCategories[index].title);
                       },
                     ),
                   ),

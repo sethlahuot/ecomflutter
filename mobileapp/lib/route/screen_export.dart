@@ -8,7 +8,11 @@ export '/screens/bookmark/views/bookmark_screen.dart';
 export '/screens/discover/views/discover_screen.dart';
 export '/screens/home/views/home_screen.dart';
 export '/screens/kids/views/kids_screen.dart';
-export '/screens/on_sale/views/on_sale_screen.dart';
+export '/screens/mens/views/mens_screen.dart' hide CategoryBtn, MensScreenRoute;
+export '/screens/womens/views/womens_screen.dart'
+    hide CategoryBtn, WomensScreenRoute;
+
+export '/screens/on_sale/views/on_sale_screen.dart' hide CategoryBtn;
 export '/screens/product/views/product_details_screen.dart';
 
 export '/screens/reviews/view/product_reviews_screen.dart';
